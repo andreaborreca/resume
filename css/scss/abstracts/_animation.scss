@@ -1,0 +1,335 @@
+@media only screen and (min-width: 769px) {
+
+    .wrap {
+
+        .header{
+
+            position: relative;
+
+            .bubble_speech_container{
+
+                opacity: 0;
+                position: absolute;
+                display: inline-block;
+                top: 9rem;
+
+                .bubble_speech {
+                    width: 15rem;
+                    border-radius: 0.8rem;
+                    font-size: $subtitle_font_size_default + 0.25;
+                    padding: 0.7rem;
+                    animation: balloons 4s ease-in-out infinite;
+                    background: $second_color;
+                    color: $white;
+                    font-family: 'Fredoka One';
+                    position: relative;
+                    box-shadow: 0.3rem 0.3rem 0.3rem -0.2rem #909292;
+
+                    @keyframes balloons {
+                        0%,100%{ transform:translateY(-0.2rem) rotate(3deg); }
+                        50%{ transform:translateY(0.2rem) rotate(2deg); }
+                    }
+    
+                    .stackoverflow{
+                        color: $stackoverflow_text_color;
+                        text-decoration: none;
+                        transition: 0.3s;
+                    }
+    
+                    .stackoverflow:hover{
+                        color: $stackoverflow_text_hover_color;
+                    }
+    
+                }
+                  
+                .bubble_speech:before {
+                    content: "";
+                    width: 0rem;
+                    height: 0rem;
+                    position: absolute;
+                    border-left: 0.7rem solid transparent;
+                    border-right: 0.7rem solid $second_color;
+                    border-top: 0.7rem solid $second_color;
+                    border-bottom: 0.7rem solid transparent;
+                    left: -0.7rem;
+                    top: 0rem;
+                }
+            }
+
+            .space_container{
+                opacity: 0;
+                position: relative;
+            }
+
+            .space_img{
+                position: absolute;
+            }
+
+            .stars_1{
+                width: 5rem;
+                top: -2rem;
+                left: 10rem;
+                transform: scaleX(-1);
+                transform: scaleY(-1);
+                filter: blur(0.6px);
+            }
+
+            .stars_2{
+                width: 10rem;
+                top: 1rem;
+                left: -1rem;
+                filter: blur(0.5px);
+            }
+
+            .stars_3{
+                width: 2rem;
+                top: -3rem;
+                left: -1rem;
+                transform: scaleX(-1);
+                filter: blur(0.7px);
+            }
+
+            .planets{
+                width: 8rem;
+                top: -1rem;
+                left: 4rem;
+                z-index: 1;
+                filter: blur(0.6px);
+            }
+
+            .planet{
+                width: 8rem;
+                top: -4rem;
+                left: 3rem;
+                filter: blur(0.6px);
+            }
+
+            .nyan_cat{
+                width: 20rem;
+                top: 9rem;
+                right: -40rem;
+                z-index: 4;
+            }
+
+            .nyan_cat_active{
+                animation: nyan_cat 6s ease-in;
+                -webkit-animation: nyan_cat 6s ease-in;
+                -moz-animation: nyan_cat 6s ease-in;
+            }
+
+            .rocket_man{
+                width: 1rem;
+                top: 5rem;
+                left: 16rem;
+                transform: scaleX(-1);
+                filter: blur(0.6px);
+            }
+
+            .rocket_man_active{
+                animation: rocket_man 50s ease-in-out infinite;
+                -webkit-animation: rocket_man 50s ease-in-out infinite;
+                -moz-animation: rocket_man 50s ease-in-out infinite;
+            }
+
+            .cloud{
+                width: 9.5rem;
+                top: 5.2rem;
+                left: -2rem;
+                z-index: 3;
+            }
+
+            .space_avatar{
+                width: 2rem;
+                top: 6rem;
+                left: 1rem;
+                opacity: 0;
+                z-index: 2;
+            }
+
+            .space_avatar_active{
+                animation: space_avatar 5.5s ease-in-out infinite;
+                -webkit-animation: space_avatar 5.5s ease-in-out infinite;
+                -moz-animation: space_avatar 5.5s ease-in-out infinite;
+            }
+
+            .space_fire{
+                width: 1rem;
+                top: 6rem;
+                left: 1rem;
+                margin-top: 2.8rem;
+                margin-left: 0.50rem;
+                transform: scaleY(-1);
+                opacity: 0;
+                z-index: 2;
+            }
+
+            .space_fire_active{
+                animation: space_fire 5.5s ease-in-out infinite;
+                -webkit-animation: space_fire 5.5s ease-in-out infinite;
+                -moz-animation: space_fire 5.5s ease-in-out infinite;
+            }
+
+            .rocket_container{
+                position: relative;
+            }
+
+            .fire_rocket{
+                position: absolute;
+                width: 8rem;
+                transform: scaleY(-1);
+                margin-top: -3rem;
+                opacity: 0;
+                z-index: 1;
+            }
+
+            .smoke_rocket{
+                position: absolute;
+                width: 20rem;
+                transform: scaleY(1.5);
+                margin-top: -10rem;
+                opacity: 0;
+                z-index: 0;
+            }
+
+            .fire_rocket_active{
+                animation: rocket 13s ease-in-out infinite;
+                -webkit-animation: rocket 13s ease-in-out infinite;
+                -moz-animation: rocket 13s ease-in-out infinite;
+            }
+        
+            .avatar_svg_active{
+                animation: avatar_rocket 13s ease-in-out infinite;
+                -webkit-animation: avatar_rocket 13s ease-in-out infinite;
+                -moz-animation: avatar_rocket 13s ease-in-out infinite;
+            }
+
+            @keyframes space_avatar {
+                70%{ transform:translateY(-8rem);}
+            }
+
+            @keyframes space_fire {
+                70%{ transform:translateY(-8rem) scaleY(-1);}
+            }
+
+            @keyframes nyan_cat {
+                100%{ transform:translateX(-200rem);}
+                
+            }
+
+            @keyframes rocket_man {
+                100%{ transform:translateX(-20rem) translateY(-10rem) scaleX(-1); }
+                
+            }
+        
+            @keyframes avatar_rocket {
+                30%{ transform:translateY(-40rem); }
+                
+            }
+    
+            @keyframes rocket {
+                30%{ transform:translateY(-40rem) scaleY(-1); }
+            }
+        }
+    }
+
+    .wrap_gradient{
+        background: rgb(11,4,20);
+        box-shadow: none;
+        background: linear-gradient(90deg, rgba(11,4,20,1) 0%, rgba(19,1,24,1) 33%, rgba(2,0,24,1) 66%, rgba(11,4,20,1) 100%);
+        background-size: 800% 800%;
+   
+        -webkit-animation: gradientChange 15s ease-in-out infinite;
+        -moz-animation: gradientChange 15s ease-in-out infinite;
+        animation: gradientChange 15s ease-in-out infinite;
+    }
+
+    @-webkit-keyframes gradientChange {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes gradientChange {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-o-keyframes gradientChange {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes gradientChange {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    } 
+
+}
+
+@media only screen and (min-width: 1366px) {
+    .wrap {
+
+        .header{
+
+            .bubble_speech_container{
+
+                top: 9rem;
+
+                .bubble_speech {
+                    width: 22.5rem;
+                    font-size: $subtitle_font_size_default * 2;
+                    padding: 1rem;
+    
+                }
+                  
+                .bubble_speech:before {
+                    position: absolute;
+                    border-left: 15px solid transparent;
+                    border-bottom: 15px solid transparent;
+                }
+            }
+
+            .fire_rocket{
+                margin-top: -3.5rem;
+            }
+
+            .stars_1{
+                left: 8rem;
+            }
+
+            .stars_2{
+                top: 2rem;
+            }
+
+            .planet{
+                width: 8rem;
+            }
+
+            .cloud{
+                top: 6.2rem;
+            }
+
+            .space_avatar{
+                top: 7.5rem;
+            }
+
+            .space_fire{
+                top: 7.5rem;
+            }
+
+            .nyan_cat_active{
+                animation: nyan_cat 4s ease-in;
+                -webkit-animation: nyan_cat 4s ease-in;
+                -moz-animation: nyan_cat 4s ease-in;
+            }
+
+            .nyan_cat{
+                width: 27rem;
+                right: -60rem;
+                top: 9rem;
+            }
+            
+        }
+
+    }
+}
